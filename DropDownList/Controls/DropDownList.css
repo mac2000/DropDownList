@@ -1,0 +1,66 @@
+﻿.ddl {
+    position: relative;
+    display: inline-block;
+    margin: -6px 0 -3px 0;
+    vertical-align: middle;
+}
+
+.ddl > .value {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 2px 20px 2px 5px;
+    border: 1px solid #999;
+    background-color: #fff;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ddl > .value:after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -2px;
+    width: 0;
+    height: 0;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #999 transparent transparent transparent;
+    content: '';
+}
+
+.ddl > .options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 2px 0 0 0;
+    padding: 0;
+    min-width: 100%;
+    border: 1px solid #999;
+    list-style: none;
+}
+
+.ddl > .options > .option {
+    padding: 3px 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.ddl > .options > .option.active,
+.ddl > .options > .option:hover {
+    background-color: #ddd;
+}
+
+.ddl > .value.active + .options {
+    display: block;
+}
